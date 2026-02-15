@@ -19,11 +19,10 @@ class MasterTest {
 
     @Test
     void testCoordinate_Structure() {
-        // High level test to ensure the engine starts
+        // High level test to ensure the engine starts and returns a valid sum
         int[][] matrix = { { 1, 2 }, { 3, 4 } };
         Object result = master.coordinate("SUM", matrix, 1);
-        // Initial stub should return null
-        assertNull(result, "Initial stub should return null");
+        assertEquals(10, result, "SUM operation should return the total of all elements");
     }
 
     @Test
